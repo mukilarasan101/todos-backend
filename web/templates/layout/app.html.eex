@@ -9,11 +9,11 @@
     <link href="/favicon.ico" rel="SHORTCUT ICON">
 
     <title>Hello Todo!</title>
-    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <!--link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>"-->
     <!--Import Google Icon Font-->
-    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="<%= static_path(@conn, "/css/materialize.min.css") %>"  media="screen,projection"/>
+    <!--link type="text/css" rel="stylesheet" href="<%= static_path(@conn, "/css/materialize.min.css") %>"  media="screen,projection"/-->
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -25,11 +25,39 @@
       <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+	<b>List of APIs</b>
+	<pre>
+         page_path  GET     /                                          Todo.PageController :index
+     category_path  GET     /api/v1/categories                         Todo.CategoryController :index
+     category_path  GET     /api/v1/categories/:id                     Todo.CategoryController :show
+     category_path  POST    /api/v1/categories                         Todo.CategoryController :create
+     category_path  PATCH   /api/v1/categories/:id                     Todo.CategoryController :update
+                    PUT     /api/v1/categories/:id                     Todo.CategoryController :update
+     category_path  DELETE  /api/v1/categories/:id                     Todo.CategoryController :delete
+category_todo_path  GET     /api/v1/categories/:category_id/todos      Todo.TodoController :index
+category_todo_path  GET     /api/v1/categories/:category_id/todos/:id  Todo.TodoController :show
+category_todo_path  POST    /api/v1/categories/:category_id/todos      Todo.TodoController :create
+category_todo_path  PATCH   /api/v1/categories/:category_id/todos/:id  Todo.TodoController :update
+                    PUT     /api/v1/categories/:category_id/todos/:id  Todo.TodoController :update
+category_todo_path  DELETE  /api/v1/categories/:category_id/todos/:id  Todo.TodoController :delete
+     category_path  GET     /api/v1/category                           Todo.CategoryController :index
+     category_path  GET     /api/v1/category/:id                       Todo.CategoryController :show
+     category_path  POST    /api/v1/category                           Todo.CategoryController :create
+     category_path  PATCH   /api/v1/category/:id                       Todo.CategoryController :update
+                    PUT     /api/v1/category/:id                       Todo.CategoryController :update
+     category_path  DELETE  /api/v1/category/:id                       Todo.CategoryController :delete
+category_todo_path  GET     /api/v1/category/:category_id/todos        Todo.TodoController :index
+category_todo_path  GET     /api/v1/category/:category_id/todos/:id    Todo.TodoController :show
+category_todo_path  POST    /api/v1/category/:category_id/todos        Todo.TodoController :create
+category_todo_path  PATCH   /api/v1/category/:category_id/todos/:id    Todo.TodoController :update
+                    PUT     /api/v1/category/:category_id/todos/:id    Todo.TodoController :update
+category_todo_path  DELETE  /api/v1/category/:category_id/todos/:id    Todo.TodoController :delete
+	</pre>
+    <!--script src="<%= static_path(@conn, "/js/app.js") %>"></script>
     <script src="<%= static_path(@conn, "/js/jquery-2.1.1.min.js") %>"></script>
     <script src="<%= static_path(@conn, "/js/init.js") %>"></script>
     <script src="<%= static_path(@conn, "/js/ember/assets/vendor.js") %>"></script>
     <script src="<%= static_path(@conn, "/js/ember/assets/todo.js") %>"></script>
-    <script src="<%= static_path(@conn, "/js/materialize.min.js") %>"></script>
+    <script src="<%= static_path(@conn, "/js/materialize.min.js") %>"></script-->
   </body>
 </html>
