@@ -1,4 +1,6 @@
-# Todo
+# Todo-backend
+
+phoenix API backend server for todo list
 
 To start your Phoenix app:
 
