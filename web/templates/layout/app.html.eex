@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/favicon.ico" rel="SHORTCUT ICON">
+
+    <title>Hello Todo!</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <!--Import Google Icon Font-->
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="<%= static_path(@conn, "/css/materialize.min.css") %>"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="todo/config/environment" content="%7B%22modulePrefix%22%3A%22todo%22%2C%22environment%22%3A%22development%22%2C%22baseURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22todo%22%2C%22version%22%3A%220.0.0+3341572e%22%7D%2C%22exportApplicationGlobal%22%3Atrue%7D" />
+
+  </head>
+
+  <body class="container">
+      <main role="main">
+        <%= render @view_module, @view_template, assigns %>
+      </main>
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <script src="<%= static_path(@conn, "/js/jquery-2.1.1.min.js") %>"></script>
+    <script src="<%= static_path(@conn, "/js/init.js") %>"></script>
+    <script src="<%= static_path(@conn, "/js/ember/assets/vendor.js") %>"></script>
+    <script src="<%= static_path(@conn, "/js/ember/assets/todo.js") %>"></script>
+    <script src="<%= static_path(@conn, "/js/materialize.min.js") %>"></script>
+  </body>
+</html>
