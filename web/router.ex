@@ -17,10 +17,6 @@ defmodule Todo.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    get "/category/:id", PageController, :index
-    get "/category/:id/edit", PageController, :index
-    get "/category/:id/delete", PageController, :index
-    get "/category/:id/todos", PageController, :index
   end
 
   # Other scopes may use custom stacks.
